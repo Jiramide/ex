@@ -1,17 +1,17 @@
 module App
   ( app
-  , initialState
+  , buildInitialState
   ) where
 
 import Brick.Main 
-  ( App (..)
+  ( App(..)
   , BrickEvent
   )
 
 import Brick.Types
-  ( Widget (..)
-  , CursorLocation (..)
-  , BrickEvent (..)
+  ( Widget(..)
+  , CursorLocation(..)
+  , BrickEvent(..)
   )
 
 type ApplicationState = String
@@ -32,6 +32,9 @@ appStartEvent = undefined
 
 appDraw :: ApplicationState -> [Widget ResourceName]
 appDraw = undefined
+buildInitialState :: IO ApplicationState
+buildInitialState = do
+  return undefined
 
 app :: App 
 app = App

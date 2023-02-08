@@ -1,8 +1,8 @@
 module Main (main) where
 
 import Lib
-import App (app, initialState)
+import App (app, buildInitialState)
 import Brick.Main (defaultMain)
 
 main :: IO ()
-main = defaultMain app initialState
+main = buildInitialState >>= defaultMain app initialState
