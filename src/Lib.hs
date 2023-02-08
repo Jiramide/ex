@@ -39,3 +39,7 @@ fileSystemFocusChild = undefined
 cursorFromFilePath :: FilePath -> IO FileSystemCursor
 cursorFromFilePath = do
   return undefined
+
+viewFromFilePath :: FilePath -> IO FileSystemCursor
+viewFromFilePath = do
+  return undefined
