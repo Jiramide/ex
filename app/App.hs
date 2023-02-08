@@ -14,6 +14,8 @@ import Brick.Types
   , BrickEvent(..)
   )
 
+import AppEvent
+
 type ApplicationState = String
 type EventType = String
 type ResourceName = String
@@ -24,14 +26,6 @@ appDraw = undefined
 appChooseCursor :: ApplicationState -> [CursorLocation ResourceName] -> Maybe (CursorLocation ResourceName) 
 appChooseCursor = undefined
 
-appHandleEvent :: BrickEvent ResourceName EventType -> EventM ResourceName ApplicationState ()
-appHandleEvent = undefined
-
-appStartEvent :: EventM ResourceName ApplicationState ()
-appStartEvent = undefined
-
-appDraw :: ApplicationState -> [Widget ResourceName]
-appDraw = undefined
 buildInitialState :: IO ApplicationState
 buildInitialState = do
   return undefined
