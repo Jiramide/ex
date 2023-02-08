@@ -1,18 +1,13 @@
-module Lib
-  ( FileSystemView
-  , FileSystemCursor
+module FileSystem.Cursor
+  ( FileSystemCursor
   , fileSystemDown
   , fileSystemUp
   , fileSystemFocusParent
   , fileSystemFocusChild
+  , cursorFromFilePath
   ) where
 
 import System.IO
-
-data FileSystemView
-  = DirectoryView FilePath
-  | FileView FilePath
-  deriving (Show, Eq, Ord)
 
 data FileSystemCursor = 
   FileSystemCursor
@@ -36,10 +31,9 @@ fileSystemFocusParent = undefined
 fileSystemFocusChild :: FileSystemCursor -> Maybe FileSystemCursor
 fileSystemFocusChild = undefined
 
+fileSystemCursorEmpty :: FileSystemCursor -> Bool
+fileSystemCursorEmpty = undefined
+
 cursorFromFilePath :: FilePath -> IO FileSystemCursor
 cursorFromFilePath = do
-  return undefined
-
-viewFromFilePath :: FilePath -> IO FileSystemCursor
-viewFromFilePath = do
   return undefined
