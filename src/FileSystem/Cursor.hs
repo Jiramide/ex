@@ -12,7 +12,7 @@ import System.IO
 data FileSystemCursor = 
   FileSystemCursor
     { path :: FilePath
-    , parent :: Maybe FileSystemView
+    , parent :: Maybe FileSystemCursor
     , child :: Maybe FileSystemView
     , cursorPrev :: [FilePath]
     , cursorNext :: [FilePath]
@@ -34,6 +34,6 @@ fileSystemFocusChild = undefined
 fileSystemCursorEmpty :: FileSystemCursor -> Bool
 fileSystemCursorEmpty = undefined
 
-cursorFromFilePath :: FilePath -> IO FileSystemCursor
+cursorFromFilePath :: FilePath -> IO (Maybe FileSystemCursor)
 cursorFromFilePath = do
   return undefined
